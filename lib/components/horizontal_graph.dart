@@ -1,9 +1,12 @@
 import "package:flutter/material.dart";
+import 'package:health_potal/components/charts.dart';
 
 // modify this class to display horizontal graphs list view
 
 class HorizontalGraphs extends StatelessWidget {
-  const HorizontalGraphs({Key? key}) : super(key: key);
+  final String graphName;
+
+  const HorizontalGraphs({Key? key, required this.graphName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,17 +18,22 @@ class HorizontalGraphs extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'OPD VISITS',
-            style: TextStyle(fontWeight: FontWeight.w300),
+          Text(
+            graphName,
+            style: const TextStyle(fontWeight: FontWeight.w300),
           ),
           const SizedBox(
             height: 16,
           ),
           Expanded(
-              child: Container(
-            color: Colors.grey,
-          )),
+              child: true
+                  ? const SimpleBarChart(
+                      [],
+                      animate: true,
+                    )
+                  : Container(
+                      color: Colors.grey,
+                    )),
         ],
       ),
     );

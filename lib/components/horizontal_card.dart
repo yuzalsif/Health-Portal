@@ -4,6 +4,7 @@ class HorizontalCard extends StatefulWidget {
   final Color cardColor;
   final double cardelevation;
   final String cardTitle;
+
   // final String? imageProvider;
 
   const HorizontalCard({
@@ -23,6 +24,9 @@ class _HorizontalCardState extends State<HorizontalCard> {
   Widget build(BuildContext context) {
     return Material(
       elevation: widget.cardelevation,
+      borderRadius: const BorderRadius.all(
+        Radius.circular(16),
+      ),
       child: Container(
         padding: const EdgeInsets.all(12),
         constraints: const BoxConstraints.expand(

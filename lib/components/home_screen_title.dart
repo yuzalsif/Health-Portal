@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 class HomeTitle extends StatelessWidget {
   const HomeTitle({Key? key}) : super(key: key);
 
-  static const title =
-      'Official dissemination point of health information in the Ministry of Health, '
+  static const title = 'Official dissemination point of health information in the Ministry of Health, '
       'Community, Development, Gender, Elderly and Children (MoHCDGEC)';
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.blue,
       padding: const EdgeInsets.only(
         top: 30,
         bottom: 6,
@@ -20,25 +18,34 @@ class HomeTitle extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              IconButton(
-                padding: EdgeInsets.zero,
-                color: Colors.white,
-                icon: const Icon(Icons.menu),
-                iconSize: 32,
-                onPressed: () {},
-              ),
-              const Text(
-                'National Health Portal',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                InkWell(
+                  // padding: EdgeInsets.all(0),
+                  // color: Colors.white,
+                  child: const Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                  ),
+                  // iconSize: 32,
+                  onTap: () {},
                 ),
-              )
-            ],
+                const SizedBox(
+                  width: 8,
+                ),
+                const Text(
+                  'National Health Portal',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+              ],
+            ),
           ),
           Column(
             children: [
