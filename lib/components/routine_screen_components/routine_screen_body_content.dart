@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components.dart';
+import '../components.dart';
 
 class RoutineBodyContent extends StatelessWidget {
   const RoutineBodyContent({Key? key}) : super(key: key);

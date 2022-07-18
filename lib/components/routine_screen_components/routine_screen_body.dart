@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:health_potal/components/components.dart';
 
-class SurveyBody extends StatelessWidget {
-  const SurveyBody({Key? key}) : super(key: key);
+class RoutineBody extends StatelessWidget {
+  const RoutineBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,16 @@ class SurveyBody extends StatelessWidget {
         ),
         color: Colors.white,
       ),
-      child: const SurveyBodyContent(),
+      child: SingleChildScrollView(
+        child: Column(
+          children: const [
+            RoutineBodyContent(),
+            SizedBox(
+              height: 16,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:health_potal/components/components.dart';
 
-class HomeBodyContent extends StatefulWidget {
-  const HomeBodyContent({
+class HomeSreenBodyContent extends StatefulWidget {
+  const HomeSreenBodyContent({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<HomeBodyContent> createState() => _HomeBodyContentState();
+  State<HomeSreenBodyContent> createState() => _HomeSreenBodyContentState();
 }
 
-class _HomeBodyContentState extends State<HomeBodyContent> {
+class _HomeSreenBodyContentState extends State<HomeSreenBodyContent> {
   final graphs = const [
     HorizontalGraphs(
       graphName: 'OPD VISIT',
@@ -95,7 +95,7 @@ class _HomeBodyContentState extends State<HomeBodyContent> {
         const SizedBox(
           height: 16,
         ),
-        const Horizontal1(),
+        const RowBeforeTheme(),
         const SizedBox(
           height: 16,
         ),
@@ -103,7 +103,7 @@ class _HomeBodyContentState extends State<HomeBodyContent> {
         const SizedBox(
           height: 16,
         ),
-        const Horizontal2(),
+        const ThemesRow(),
         const SizedBox(
           height: 24,
         ),

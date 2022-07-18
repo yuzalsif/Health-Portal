@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
 
-import 'components.dart';
+import '../components.dart';
 
-class Horizontal2 extends StatelessWidget {
-  const Horizontal2({Key? key}) : super(key: key);
+class ThemesRow extends StatelessWidget {
+  const ThemesRow
+({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        const HorizontalCard(
+        const AppCards(
           cardTitle: 'NACP',
           cardelevation: 8.0,
         ),
-        HorizontalCard(
+        AppCards(
           cardTitle: 'NMCP',
           cardColor: Colors.blue.withOpacity(0.6),
           cardelevation: 8.0,
         ),
-        const HorizontalCard(
+        const AppCards(
           cardTitle: 'PMTCT',
           cardelevation: 8.0,
         ),
-        const HorizontalCard(
+        const AppCards(
           cardTitle: 'NTDCP',
           cardelevation: 8.0,
         ),

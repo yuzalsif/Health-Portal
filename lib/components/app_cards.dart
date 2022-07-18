@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HorizontalCard extends StatefulWidget {
+class AppCards extends StatefulWidget {
   final Color cardColor;
   final double cardelevation;
   final String cardTitle;
 
   // final String? imageProvider;
 
-  const HorizontalCard({
+  const AppCards({
     Key? key,
     this.cardColor = Colors.white,
     this.cardelevation = 0.0,
@@ -16,10 +16,10 @@ class HorizontalCard extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<HorizontalCard> createState() => _HorizontalCardState();
+  State<AppCards> createState() => _AppCardsState();
 }
 
-class _HorizontalCardState extends State<HorizontalCard> {
+class _AppCardsState extends State<AppCards> {
   @override
   Widget build(BuildContext context) {
     return Material(

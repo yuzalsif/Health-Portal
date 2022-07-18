@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components.dart';
+import '../components.dart';
 
 class SurveyBodyContent extends StatelessWidget {
   const SurveyBodyContent({Key? key}) : super(key: key);

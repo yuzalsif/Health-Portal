@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:health_potal/components/components.dart';
 
-class HomeBody extends StatelessWidget {
-  const HomeBody({Key? key}) : super(key: key);
+class HomeSreenBody extends StatelessWidget {
+  const HomeSreenBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class HomeBody extends StatelessWidget {
         ),
         color: Colors.white,
       ),
-      child: const HomeBodyContent(),
+      child: const HomeSreenBodyContent(),
       );
   }
 }

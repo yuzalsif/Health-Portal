@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:health_potal/screens/screens.dart';
 import 'components.dart';
 
-class Horizontal1 extends StatelessWidget {
-  const Horizontal1({Key? key}) : super(key: key);
+class RowBeforeTheme extends StatelessWidget {
+  const RowBeforeTheme({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class Horizontal1 extends StatelessWidget {
               }),
             );
           },
-          child: HorizontalCard(
+          child: AppCards(
             cardTitle: 'Routine',
             cardColor: Colors.blue.withOpacity(0.4),
           ),
@@ -33,16 +33,16 @@ class Horizontal1 extends StatelessWidget {
               }),
             );
           },
-          child: HorizontalCard(
+          child: AppCards(
             cardTitle: 'Survey',
             cardColor: Colors.blue.withOpacity(0.4),
           ),
         ),
-        HorizontalCard(
+        AppCards(
           cardTitle: 'Library',
           cardColor: Colors.blue.withOpacity(0.4),
         ),
-        HorizontalCard(
+        AppCards(
           cardTitle: 'Updates',
           cardColor: Colors.blue.withOpacity(0.4),
         ),

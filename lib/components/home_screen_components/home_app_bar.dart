@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeTitle extends StatelessWidget {
-  const HomeTitle({Key? key}) : super(key: key);
+class HomeAppBar extends StatelessWidget {
+  const HomeAppBar({Key? key}) : super(key: key);
 
   static const title = 'Official dissemination point of health information in the Ministry of Health, '
       'Community, Development, Gender, Elderly and Children (MoHCDGEC)';
