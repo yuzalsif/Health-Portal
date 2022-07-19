@@ -4,6 +4,9 @@ class AppCards extends StatefulWidget {
   final Color cardColor;
   final double cardelevation;
   final String cardTitle;
+  final String? imageUrl;
+  final double width;
+  final double height;
 
   // final String? imageProvider;
 
@@ -11,8 +14,10 @@ class AppCards extends StatefulWidget {
     Key? key,
     this.cardColor = Colors.white,
     this.cardelevation = 0.0,
-    // this.imageProvider,
+    this.imageUrl,
     required this.cardTitle,
+    required this.height,
+    required this.width
   }) : super(key: key);
 
   @override
@@ -28,34 +33,39 @@ class _AppCardsState extends State<AppCards> {
         Radius.circular(16),
       ),
       child: Container(
-        padding: const EdgeInsets.all(12),
-        constraints: const BoxConstraints.expand(
-          width: 70,
-          height: 70,
+        padding: const EdgeInsets.all(8),
+        constraints: BoxConstraints.expand(
+          width: widget.width,
+          height: widget.height,
         ),
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(
             Radius.circular(16),
           ),
           color: widget.cardColor,
-          // image: DecorationImage(
-          //   image: AssetImage(widget.imageProvider ?? ''),
-          // ),
         ),
-        child: Stack(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Positioned(
-              bottom: 0,
-              child: FittedBox(
-                child: Text(
-                  widget.cardTitle,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12,
-                    color: Colors.blue,
-                  ),
+            SizedBox(
+              child: Expanded(
+                child: Image(
+                  image: AssetImage(widget.imageUrl ?? ''),
+                  fit: BoxFit.fill,
                 ),
               ),
+              width: 50,
+              height: 35,
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Text(
+              widget.cardTitle,
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
+                  color: Colors.blue),
             ),
           ],
         ),

@@ -22,6 +22,8 @@ class RowBeforeTheme extends StatelessWidget {
           child: AppCards(
             cardTitle: 'Routine',
             cardColor: Colors.blue.withOpacity(0.4),
+            width: 70,
+            height: 70,
           ),
         ),
         GestureDetector(
@@ -36,15 +38,21 @@ class RowBeforeTheme extends StatelessWidget {
           child: AppCards(
             cardTitle: 'Survey',
             cardColor: Colors.blue.withOpacity(0.4),
+            width: 70,
+            height: 70,
           ),
         ),
         AppCards(
           cardTitle: 'Library',
           cardColor: Colors.blue.withOpacity(0.4),
+          width: 70,
+          height: 70,
         ),
         AppCards(
           cardTitle: 'Updates',
           cardColor: Colors.blue.withOpacity(0.4),
+          width: 70,
+          height: 70,
         ),
       ],
     );
