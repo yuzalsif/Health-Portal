@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_potal/screens/news_sreens.dart';
 import './components/components.dart';
 
 class Home extends StatelessWidget {
@@ -19,13 +20,16 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: buildNavigationButton(),
+      floatingActionButton: buildNavigationButton(context),
     );
   }
 
-  Widget buildNavigationButton() => FloatingActionButton(
-        child: const Text("NewsFeed"),
-        backgroundColor: Colors.blue,
-        onPressed: () {},
-      );
+  Widget buildNavigationButton(BuildContext context) => FloatingActionButton(
+      child:
+          const Center(child: Text("News Feed", textAlign: TextAlign.center)),
+      backgroundColor: Colors.red,
+      onPressed: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const NewsScreen()));
+      });
 }

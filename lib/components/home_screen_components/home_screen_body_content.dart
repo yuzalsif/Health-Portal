@@ -67,7 +67,8 @@ class _HomeSreenBodyContentState extends State<HomeSreenBodyContent> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ...graphs.map((element) {
-                        if (pageController.hasClients && pageController.page != null) {
+                        if (pageController.hasClients &&
+                            pageController.page != null) {
                           return Container(
                             margin: const EdgeInsets.only(
                               top: 24,
@@ -112,6 +113,8 @@ class _HomeSreenBodyContentState extends State<HomeSreenBodyContent> {
   }
 
   _getColor(HorizontalGraphs element) {
-    return graphs.indexOf(element) == (pageController.page?.toInt() ?? 0) ? Colors.grey : Colors.white;
+    return graphs.indexOf(element) == (pageController.page?.toInt() ?? 0)
+        ? Colors.grey
+        : Colors.white;
   }
 }
