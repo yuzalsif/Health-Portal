@@ -3,7 +3,7 @@ import 'package:health_potal/models/news_feed_model.dart';
 import 'package:http/http.dart'; 
 
 const String baseUrl = 'https://newsapi.org/v2/everything';
-const String query = 'apple';
+const String query = 'health';
 const String from = '2022-07-19';
 const String to = '2022-07-19';
 const String apiKey = '6aa0eaebc1c543eea5d8635bf929208c';

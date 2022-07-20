@@ -34,28 +34,31 @@ class _NewsScreenState extends State<NewsScreen> {
           },
         ),
       ),
-      body: FutureBuilder<NewsFeed>(
-        future: NewsServices.getNews(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.done) {
-            if (snapshot.hasData) {
-              final newsFeeds = snapshot.data;
-              return ListView.separated(
-                  itemBuilder: (context, index) {
-                    return NewsScreenRow(news: newsFeeds!.articles![index]);
-                  },
-                  separatorBuilder: (context, index) {
-                    return const SizedBox(
-                      height: 16,
-                    );
-                  },
-                  itemCount: newsFeeds!.articles!.length);
-            } else {
-              Text('$snapshot.error');
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: FutureBuilder<NewsFeed>(
+          future: NewsServices.getNews(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              if (snapshot.hasData) {
+                final newsFeeds = snapshot.data;
+                return ListView.separated(
+                    itemBuilder: (context, index) {
+                      return NewsScreenRow(news: newsFeeds!.articles![index]);
+                    },
+                    separatorBuilder: (context, index) {
+                      return const SizedBox(
+                        height: 16,
+                      );
+                    },
+                    itemCount: newsFeeds!.articles!.length);
+              } else {
+                Text('$snapshot.error');
+              }
             }
-          }
-          return const CircularProgressIndicator();
-        },
+            return const Center(child: CircularProgressIndicator());
+          },
+        ),
       ),
     );
   }
