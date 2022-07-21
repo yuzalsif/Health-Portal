@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 
-class SurveyTitle extends StatelessWidget {
-  const SurveyTitle({Key? key}) : super(key: key);
+class ScreenHeader extends StatelessWidget {
+  final String title;
+  final String? subTitle;
+  final Widget? actionButton;
+  const ScreenHeader({
+    Key? key,
+    required this.title,
+    this.subTitle,
+    this.actionButton
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      // color: Colors.blue,
       padding: const EdgeInsets.only(
         top: 30,
-        bottom: 6,
+        bottom: 10,
         left: 16,
         right: 16,
       ),
@@ -37,9 +43,9 @@ class SurveyTitle extends StatelessWidget {
                     const SizedBox(
                       width: 8,
                     ),
-                    const Text(
-                      'Survey Data Statistics',
-                      style: TextStyle(
+                    Text(
+                      title,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
@@ -47,24 +53,15 @@ class SurveyTitle extends StatelessWidget {
                     ),
                   ],
                 ),
-                InkWell(
-                  // padding: EdgeInsets.all(0),
-                  // color: Colors.white,
-                  child: const Icon(
-                    Icons.tune,
-                    color: Colors.white,
-                  ),
-                  // iconSize: 32,
-                  onTap: () {},
-                ),
+                actionButton ?? Container(),
               ],
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 32.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 32.0),
             child: Text(
-              'RCH-Antenatal care',
-              style: TextStyle(
+              subTitle ?? '',
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),

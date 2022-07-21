@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_potal/components/all_screens_layout/screens_body.dart';
 import 'package:health_potal/screens/news_sreens.dart';
 import './components/components.dart';
 
@@ -15,7 +16,11 @@ class Home extends StatelessWidget {
           children: const [
             HomeAppBar(),
             Expanded(
-              child: HomeSreenBody(),
+              child: SingleChildScrollView(
+                child: ScreenBody(
+                  child: HomeSreenBodyContent(),
+                ),
+              ),
             ),
           ],
         ),

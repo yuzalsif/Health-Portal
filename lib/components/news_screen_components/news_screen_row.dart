@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_potal/models/news_feed_model.dart';
 
+
 class NewsScreenRow extends StatelessWidget {
   final News news;
 

@@ -1,16 +1,8 @@
 export 'home_screen_components/home_app_bar.dart';
-export 'home_screen_components/home_screen_body.dart';
-// export '../screens/home_screen.dart';
 export 'home_screen_components/home_screen_body_content.dart';
 export 'app_cards.dart';
 export 'horizontal_graph.dart';
 export 'row_before_themes.dart';
 export 'themes_components/themes_title.dart';
 export 'themes_components/themes_row.dart';
-export 'routine_screen_components/routine_screen_body.dart';
-export 'routine_screen_components/routine_screen_body_content.dart';
-export 'routine_screen_components/routine_screen_title.dart';
-export 'survey_screen_components/survey_screen_title.dart';
-export 'survey_screen_components/survey_screen_body.dart';
-export 'survey_screen_components/survey_screen_body_content.dart';
 export 'charts.dart';

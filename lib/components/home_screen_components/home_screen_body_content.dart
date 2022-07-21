@@ -36,7 +36,7 @@ class _HomeSreenBodyContentState extends State<HomeSreenBodyContent> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: <Widget>[
         const Text(
           'HIGHLIGHTS',

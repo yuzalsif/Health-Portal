@@ -58,7 +58,7 @@ class _AppCardsState extends State<AppCards> {
               height: 35,
             ),
             const SizedBox(
-              height: 5,
+              height: 3,
             ),
             Text(
               widget.cardTitle,
@@ -66,6 +66,7 @@ class _AppCardsState extends State<AppCards> {
                   fontWeight: FontWeight.bold,
                   fontSize: 12,
                   color: Colors.blue),
+                  textAlign: TextAlign.center,
             ),
           ],
         ),
