@@ -34,7 +34,6 @@ class _AllThemesScreenState extends State<AllThemesScreen> {
                     crossAxisSpacing: 12,
                   ),
                   primary: false,
-                  physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: ThemeCards.allCards.length,
                   padding: const EdgeInsets.only(bottom: 10),

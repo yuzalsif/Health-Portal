@@ -3,73 +3,29 @@ import 'package:flutter/material.dart';
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({Key? key}) : super(key: key);
 
-  static const title = 'Official dissemination point of health information in the Ministry of Health, '
-      'Community, Development, Gender, Elderly and Children (MoHCDGEC)';
+  static const title = 'National Health Portal';
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(
-        top: 30,
-        bottom: 6,
-        left: 16,
-        right: 16,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                InkWell(
-                  // padding: EdgeInsets.all(0),
-                  // color: Colors.white,
-                  child: const Icon(
-                    Icons.menu,
-                    color: Colors.white,
-                  ),
-                  // iconSize: 32,
-                  onTap: () {},
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
-                const Text(
-                  'National Health Portal',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-              ],
+    return Padding(
+      padding: const EdgeInsets.only(right: 4),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: const [
+          Text(
+            title,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          Column(
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                  color: Colors.white.withOpacity(0.7),
-                  fontSize: 13,
-                ),
-                maxLines: 3,
-              ),
-              Center(
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'READ MORE',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          SizedBox(
+            width: 23,
+            height: 23,
+            child: Image(
+              image: AssetImage('assets/cards_images/coat-of-arms.png'),
+            ),
+          )
         ],
       ),
     );

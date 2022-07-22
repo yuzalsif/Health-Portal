@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_potal/components/all_screens_layout/screens_body.dart';
+import 'package:health_potal/components/home_screen_components/drawer_screen.dart';
 import 'package:health_potal/screens/news_sreens.dart';
 import './components/components.dart';
 
@@ -9,12 +10,17 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: const Color(0xff2a8ed1),
+      drawer: const NavigationDrawer(),
+      appBar: AppBar(
+        elevation: 0.0,
+        title: const HomeAppBar(),
+        backgroundColor: const Color(0xff2a8ed1),
+      ),
+      body: SizedBox(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
-            HomeAppBar(),
+            // HomeAppBar(),
             Expanded(
               child: SingleChildScrollView(
                 child: ScreenBody(
